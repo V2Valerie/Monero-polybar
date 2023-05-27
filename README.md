@@ -4,3 +4,15 @@ Prints out monero price on your polybar<br>
 # Dependencies
 + jq
 + curl
+
+# add the following module to your Polybar configuration file
+```bash
+[module/monero-price]
+type = custom/script
+exec = /path/to/monero-price.sh
+tail = true
+interval = 5
+label = %output%
+```
+Replace /path/to/monero-price.sh with the actual path where you saved the script.<br>
+Save the configuration file and restart Polybar.<br>
